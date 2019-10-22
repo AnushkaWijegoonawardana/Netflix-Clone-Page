@@ -1,0 +1,37 @@
+// Sass Variables
+$main-theme-color: #e50914;
+
+$main-bg-color: #000;
+$secondary-bg-color: #303030;
+$extra-bg-color: #222;
+
+$main-text-color: #fff;
+$secondary-text-color: #a6a6a6;
+// Sass Variables
+
+
+// Media Querie Mixins
+@mixin xsscreen {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin  smscreen {
+    @media screen and (min-width:481px) and (max-width:768px) {
+        @content;
+    }
+}
+
+@mixin  mdscreen {
+    @media screen and (min-width:769px) and (max-width:1080px) {
+        @content;
+    }
+}
+
+@mixin  lgscreen {
+    @media screen and (min-width:1081px) and (max-width:1360px) {
+        @content;
+    }
+}
+// Media Querie Mixins

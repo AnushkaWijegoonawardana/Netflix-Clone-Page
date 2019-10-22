@@ -1,0 +1,274 @@
+@import "functions";
+
+// Font Styles
+.hero-header {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: $main-text-color;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+.text-par {
+  font-size: 1.5rem;
+  color: $main-text-color;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+}
+
+@include xsscreen() {
+  .hero-header {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  .text-par {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 2rem;
+  }
+}
+
+@include smscreen() {
+  .hero-header {
+    font-size: 2.4rem;
+    margin-bottom: 1.7rem;
+  }
+
+  .text-par {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@include mdscreen() {
+  .hero-header {
+    font-size: 2.7rem;
+    line-height: 1;
+    margin-bottom: 1.8rem;
+  }
+
+  .text-par {
+    font-size: 1.3rem;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+  }
+}
+// Font Styles
+
+// Alignment Styles
+.center {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.left {
+  text-align: left;
+  vertical-align: middle;
+}
+
+.right {
+  text-align: right;
+  vertical-align: middle;
+}
+
+@include xsscreen() {
+  .left {
+    text-align: center;
+  }
+}
+
+@include smscreen() {
+  .left {
+    text-align: center;
+  }
+}
+
+@include mdscreen() {
+  .left {
+    text-align: center;
+  }
+}
+// Alignment Styles
+
+// Button Styles
+.btn {
+  padding: 16px 32px;
+  color: $main-text-color;
+  font-weight: 500;
+  border-radius: 5px;
+
+  &-login {
+    background-color: $main-theme-color;
+    font-size: 1rem;
+  }
+
+  &-primary {
+    background-color: $main-theme-color;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: bolder;
+  }
+
+  &-secondary {
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 1px solid $main-text-color;
+    border-radius: 0;
+  }
+}
+
+@include xsscreen() {
+  .btn {
+    padding: 8px 16px;
+    font-weight: 400;
+
+    &-login {
+      font-size: 0.8rem;
+    }
+
+    &-primary {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    &-secondary {
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+  }
+}
+
+@include smscreen() {
+  .btn {
+    padding: 16px 32px;
+    font-weight: 400;
+
+    &-login {
+      font-size: 1rem;
+    }
+
+    &-primary {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    &-secondary {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@include mdscreen() {
+    .btn {
+        padding: 12px 24px;
+            
+        &-primary {
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+      
+        &-secondary {
+          font-size: 1.4rem;
+          font-weight: normal;
+        }
+      }
+}
+
+// Button Styles
+
+// Accordian Container
+.according-container {
+  .accordion {
+    background-color: $secondary-bg-color;
+    color: $main-text-color;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+
+    &::after {
+      content: "\02795"; /* Unicode character for "plus" sign (+) */
+      font-size: 1rem;
+      color: $main-text-color;
+      float: right;
+      margin-left: 5px;
+    }
+  }
+
+  .active,
+  .accordion:hover {
+    background-color: $secondary-bg-color;
+  }
+
+  .panel {
+    padding: 0 16px;
+    background-color: $secondary-bg-color;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    color: $main-text-color;
+    margin-bottom: 5px;
+
+    p {
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+  }
+
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+}
+
+@include xsscreen() {
+  .according-container {
+    .accordion {
+      font-size: 1rem;
+      padding: 0.8rem;
+    }
+
+    .panel {
+      padding: 0 0.8rem;
+
+      p {
+        font-size: 1rem;
+        padding: 0.8rem;
+      }
+    }
+  }
+}
+
+@include smscreen() {
+  .according-container {
+    .accordion {
+      padding: 1rem;
+      font-size: 1.2rem;
+      margin-bottom: 3px;
+    }
+
+    .panel {
+      padding: 0 1rem;
+      margin-bottom: 3px;
+
+      p {
+        font-size: 1.2rem;
+        padding: 1rem;
+      }
+    }
+  }
+}
+// Accordian Container
