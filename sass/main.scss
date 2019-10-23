@@ -102,9 +102,9 @@ a {
   grid-gap: 1rem;
 
   .img-container {
-      img {
-          width: 100%;
-      }
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -318,3 +318,50 @@ a {
   }
 }
 // Footer Container
+
+// Sign In Page
+.signin {
+  width: 40%;
+
+  .form-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+
+    .form-group {
+      padding: 8px;
+      margin-bottom: 1rem;
+
+      input {
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 1rem;
+        background-color: $secondary-bg-color;
+        border: none;
+        border-radius: 5px;
+        width: 80%;
+        color: $main-text-color;
+        line-height: 1.6;
+
+        &::placeholder {
+          color: $main-text-color;
+        }
+      }
+    }
+
+    .signin-btn {
+      padding: 16px 32px;
+      width: 80%;
+      background-color: $main-theme-color;
+      text-align: center;
+      margin: auto;
+      border-radius: 5px;
+      margin-bottom: 2rem;
+      color: $main-text-color;
+      font-size: 1.5rem;
+      font-weight: bolder;
+    }
+  }
+}
+// Sign In Page
